@@ -16,4 +16,12 @@ export class AccountService {
     const body=JSON.stringify(user);
     return this._http.post<any>("http://localhost:8080/client/login",body,{'headers':headers})
   }
+
+
+  //call java(springboot rest) endpoint from here
+  public registerUser(user:User){
+    const headers = {'content-type':'application/json'}
+    const body=JSON.stringify(user);
+    return this._http.post<any>("http://localhost:8080/client/register",body,{'headers':headers})
+  }
 }

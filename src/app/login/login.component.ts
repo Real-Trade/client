@@ -11,7 +11,7 @@ import { User } from '../user';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
- user:User = new User("fromangular","fromangular","unique@gmail.com","unique");
+ user:User = new User();
 errorMessage='';
 
 
@@ -29,4 +29,5 @@ this._service.loginUser(this.user).subscribe(
 this.errorMessage = "Enter login details again";  
 })
   }
+
 }
