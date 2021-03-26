@@ -2,15 +2,15 @@
 <form #Registrationform="ngForm" (ngSubmit)="registerUser()">
     <small class="text-danger">{{this.errorMessage}}</small>
     <div class="form-group">
-        <label for="firstname">FirstName</label>
-        <input type="text" class="form-control" id = "firstname" placeholder="FirstName" name="firstname" [(ngModel)]="user.firstname" #firstname="ngModel" required >
-      <small class="text-danger" [class.d-none]=" firstname.valid||firstname.untouched">firstname is a required field</small>
+        <label for="firstName">FirstName</label>
+        <input type="text" class="form-control" id = "firstName" placeholder="FirstName" name="firstName" [(ngModel)]="user.firstName" #firstName="ngModel" required >
+      <small class="text-danger" [class.d-none]=" firstName.valid||firstName.untouched">firstName is a required field</small>
       </div>
 
       <div class="form-group">
-        <label for="lastname">LastName</label>
-        <input type="text" id = "lastname" class="form-control" placeholder="LastName" name="lastname" [(ngModel)]="user.lastname" required #lastname="ngModel">
-      <small class="text-danger" [class.d-none]="lastname.valid||lastname.untouched">lastname is a required field</small>
+        <label for="lastName">LastName</label>
+        <input type="text" id = "lastName" class="form-control" placeholder="LastName" name="lastName" [(ngModel)]="user.lastName" required #lastName="ngModel">
+      <small class="text-danger" [class.d-none]="lastName.valid||lastName.untouched">lastName is a required field</small>
       </div>
 
     <div class="form-group">

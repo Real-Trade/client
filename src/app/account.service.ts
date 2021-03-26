@@ -14,6 +14,7 @@ export class AccountService {
   public loginUser(user:User): Observable<any>{
     const headers = {'content-type':'application/json'}
     const body=JSON.stringify(user);
+    console.log(body)
     return this._http.post<any>("http://localhost:8080/client/login",body,{'headers':headers})
   }
 
