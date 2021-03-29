@@ -1,9 +1,38 @@
-<app-navbar *ngIf="!(router.url == '/login')"></app-navbar>
 
-<div class="container-fluid">
-  <div class="row">
-<app-sidebar *ngIf="!(router.url == '/login')"></app-sidebar>
-<router-outlet></router-outlet>
+<br >
+<br>
+<br>
+
+ <div class="container">
+ <div class="row">
+
+  <div class="col-sm-4">
+    <div class="card border-success mb-3 ">
+      <div class="card-body">
+        <h1 class="card-title">Balance</h1>
+        <h3 class="card-text">{{this.balance}}</h3>
+       
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card border-secondary mb-3">
+      <div class="card-body">
+        <h1 class="card-title">Portofolio</h1>
+        <h3 class="card-text">{{this.portfolioNumber}}</h3>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-sm-4">
+      <div class="card border-primary mb-3">
+        <div class="card-body">
+          <h1 class="card-title">All orders</h1>
+          <h3 class="card-text">{{this.orderNumber}}</h3>
+        </div>
+      </div>
+      </div>
+  <div class="col-sm-4">
   </div>
 </div>
-
+</div>

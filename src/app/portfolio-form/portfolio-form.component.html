@@ -1,0 +1,19 @@
+
+<br>
+<br>
+<div class="container h-100">
+<div class="row h-100 justify-content-center align-items-center">
+<form #portfolioname="ngForm" (submit)="createPortfolio()" >    
+        <small class="text-danger" [class.d-none]="portfolioname.untouched || portfolioname.valid">please enter a portfolio name !</small>
+        <div class="form-group">
+       <label for="portfolioName">Portfolio Name</label>
+      <input type="text" class="form-control" name="portfolioname" id="portfolioName" #portfolioname="ngModel" [(ngModel)]="portfolio.portfolioName" placeholder="Portfolio Name" required>
+    </div>
+ 
+    <div class="form-group">
+        <button [disabled]="portfolioname.form.invalid" class="btn btn-primary" type="submit">Create Portfolio</button>
+    </div>
+  </form>
+</div>
+</div>
+

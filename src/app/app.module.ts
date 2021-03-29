@@ -13,6 +13,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { OrdersComponent } from './orders/orders.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { OrderFormComponent } from './order-form/order-form.component';
+import { PortfolioFormComponent } from './portfolio-form/portfolio-form.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { OrdersComponent } from './orders/orders.component';
     DashboardComponent,
     NavbarComponent,
     SidebarComponent,
-    OrdersComponent
+    OrdersComponent,
+    HomepageComponent,
+    OrderFormComponent,
+    PortfolioFormComponent
   ],
   imports: [
     MatSidenavModule,

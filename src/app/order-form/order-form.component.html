@@ -1,0 +1,48 @@
+
+<br>
+<br>
+<div class="container h-100">
+<div class="row h-100 justify-content-center align-items-center">
+<form #orderform="ngForm" (ngSubmit)="placeOrder()">
+    <small class="text-danger" [class.d-none]="ticker.untouched || ticker.valid" >please choose a ticker</small>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Ticker</label>
+        <select class="form-control" name="Ticker" #ticker="ngModel" [(ngModel)]="order.product"> required
+            <option value="">Please choose a ticker</option>
+            <option value="MSFT">MSFT</option>
+            <option value="NFLX">NFLX</option>
+            <option value="GOOGL">GOOGL</option>
+            <option value="AAPL">AAPL</option>
+            <option value="TSLA">TSLA</option>
+            <option value="IBM">IBM</option>
+            <option value="ORCL">ORCL</option>
+            <option value="AMZN">AMZN</option>
+            </select>
+        </div>
+      
+        <small class="text-danger" [class.d-none]="quantity.untouched || quantity.valid">please enter a quantity !</small>
+        <div class="form-group">
+       <label for="quantity">Quantity</label>
+      <input type="text" class="form-control" name="quantity" #quantity="ngModel" [(ngModel)]="order.quantity" id="quantity" placeholder="quantity" required>
+    </div>
+    <small class ="text-danger" [class.d-non]="price.untouched ||price.valid"></small>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" class="form-control" name="price" #price="ngModel" [(ngModel)]="order.price" id="price" placeholder="Price" required>
+    </div>
+    <small class="text-danger" [class.d-none]="side.untouched ||side.valid">please choose a side</small>
+    <div class="form-group">
+        <label for="side">Side</label>
+        <select class="form-control" name="side" id="side" #side="ngModel" [(ngModel)]="order.side" required>
+            <option value="">Please choose side</option>
+            <option value="BUY">BUY</option>
+            <option value="SELL">SELL</option> 
+            </select>
+        </div>
+    <div class="form-group">
+        <button [disabled]="orderform.form.invalid" class="btn btn-primary" type="submit">Submit Order</button>
+    </div>
+  </form>
+</div>
+</div>
+

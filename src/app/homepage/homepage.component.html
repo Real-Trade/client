@@ -1,0 +1,31 @@
+<app-navbar *ngIf="!(router.url == '/')"></app-navbar>
+
+<div class="container-fluid">
+  <div class="row">
+
+
+    <div class="col-md-2">
+        <app-sidebar *ngIf="!(router.url == '/')"></app-sidebar>
+
+        </div>
+
+
+
+      <div class="col-md-8">
+        <router-outlet></router-outlet>
+
+        </div>
+
+
+
+
+
+
+
+
+ 
+
+
+</div>
+</div>
+

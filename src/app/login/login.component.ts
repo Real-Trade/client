@@ -2,8 +2,8 @@ import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
 import { Router, Routes } from '@angular/router';
-import { AccountService } from '../account.service';
-import { User } from '../user';
+import { AccountService } from '../services/account.service';
+import { User } from '../models/user';
 
 @Component({
   selector: 'app-login',
@@ -27,6 +27,7 @@ this._service.loginUser(this.user).subscribe(
   },
   error=>{console.log("exception occured")  
 this.errorMessage = "Enter login details again";  
+//this._route.navigate(['/dashboard']);//TODO:remove this
 })
   }
 

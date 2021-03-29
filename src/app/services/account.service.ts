@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { User } from './user';
+import { User } from '../models/user';
 import {HttpClient} from '@angular/common/http';
 
 @Injectable({
@@ -14,7 +14,6 @@ export class AccountService {
   public loginUser(user:User): Observable<any>{
     const headers = {'content-type':'application/json'}
     const body=JSON.stringify(user);
-    console.log(body)
     return this._http.post<any>("http://localhost:8080/client/login",body,{'headers':headers})
   }
 
