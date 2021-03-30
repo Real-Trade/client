@@ -19,7 +19,6 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   registerUser(){
 this._service.registerUser(this.user).subscribe(
   data=>{console.log("response recieved");

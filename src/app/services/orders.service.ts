@@ -19,7 +19,8 @@ export class OrdersService {
 
 public placeOrder(order:Order):Observable<any>  {
   const headers = {'content-type':'application/json'}
-  return this._http.post('https://rt-order-validation.herokuapp.com/validate',order,{headers:headers});
+  const body=JSON.stringify(order);
+  return this._http.post('https://rt-order-validation.herokuapp.com/validate',body,{headers:headers});
 }
 /** 
   * return all client's orders from an API

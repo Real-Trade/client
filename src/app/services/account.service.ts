@@ -14,7 +14,8 @@ export class AccountService {
   public loginUser(user:User): Observable<any>{
     const headers = {'content-type':'application/json'}
     const body=JSON.stringify(user);
-    return this._http.post<any>("http://localhost:8080/client/login",body,{'headers':headers})
+    // return this._http.post<any>("http://localhost:8080/client/login",body,{'headers':headers})
+    return this._http.post<any>("https://rt-client-connectivity.herokuapp.com/client/login",body,{'headers':headers})
   }
 
 
@@ -22,6 +23,7 @@ export class AccountService {
   public registerUser(user:User){
     const headers = {'content-type':'application/json'}
     const body=JSON.stringify(user);
-    return this._http.post<any>("http://localhost:8080/client/register",body,{'headers':headers})
+    // return this._http.post<any>("http://localhost:8080/client/register",body,{'headers':headers})
+    return this._http.post<any>("https://rt-client-connectivity.herokuapp.com/client/register",body,{'headers':headers})
   }
 }
