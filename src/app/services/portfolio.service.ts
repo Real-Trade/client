@@ -11,7 +11,7 @@ export class PortfolioService {
   /**
    * createPortfolio: hit API to create portfolio in db
    */
-  public createPortfolio(): Observable<any> {
-    return this._http.post("");
-  }
+  // public createPortfolio(): Observable<any> {
+  //   return this._http.post("");
+  // }
 }
