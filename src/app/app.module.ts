@@ -18,6 +18,7 @@ import { OrderFormComponent } from './order-form/order-form.component';
 import { PortfolioFormComponent } from './portfolio-form/portfolio-form.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,8 +30,8 @@ import { PortfolioFormComponent } from './portfolio-form/portfolio-form.componen
     OrdersComponent,
     HomepageComponent,
     OrderFormComponent,
-    PortfolioFormComponent
-  ],
+    PortfolioFormComponent,
+   ],
   imports: [
     MatSidenavModule,
     BrowserModule,

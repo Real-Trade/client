@@ -20,9 +20,29 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-this.balance = this._service.getBalance();
-this.orderNumber=this._service.getOrderNumber();
-this.portfolioNumber=this._service.getPortfolioNumber();
+// this.balance =
+ this._service.getBalance().subscribe(
+  data=>{
+    this.balance=data.balance;
+    console.log(data);
+  },
+  error=>{
+    this.balance=error.error.message;
+  }
+);
+
+//return the number of orders a client has
+this._service.getOrderNumber().subscribe(
+  data=>{
+
+    this.orderNumber=data.length;
+  },
+  error=>{
+    this.orderNumber=error.error.message;
+  }
+);
+
+this._service.getPortfolioNumber()
   }
 
 }

@@ -5,6 +5,7 @@ import { Router, Routes } from '@angular/router';
 import { AccountService } from '../services/account.service';
 import { User } from '../models/user';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -22,10 +23,14 @@ errorMessage='';
 
   loginUser(){
 this._service.loginUser(this.user).subscribe(
-  data=>{console.log("response recieved");
+  data=>{
+    localStorage.setItem('userData',JSON.stringify(data))
+    console.log("response recieved");
   this._route.navigate(['dashboard']);
   },
-  error=>{console.log("exception occured")  
+  error=>{
+    console.log("exception occured")
+    console.log(error.error.message)  
 this.errorMessage = "Enter login details again";  
 //this._route.navigate(['/dashboard']);//TODO:remove this
 })

@@ -21,7 +21,9 @@ export class RegistrationComponent implements OnInit {
 
   registerUser(){
 this._service.registerUser(this.user).subscribe(
-  data=>{console.log("response recieved");
+  data=>{
+    localStorage.setItem('userData',JSON.stringify(data));
+     console.log("response recieved");
 this._route.navigate(['dashboard'])
 },
   error=>{
